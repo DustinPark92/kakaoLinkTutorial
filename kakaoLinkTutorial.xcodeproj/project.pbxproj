@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6353C3C94B5B5F59DD2823D7 /* Pods_kakaoLinkTutorial.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE7CF88E834533BC1E9305F3 /* Pods_kakaoLinkTutorial.framework */; };
 		DABEF0D7251C779000A8BD22 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DABEF0D6251C779000A8BD22 /* AppDelegate.swift */; };
 		DABEF0D9251C779000A8BD22 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DABEF0D8251C779000A8BD22 /* SceneDelegate.swift */; };
 		DABEF0DB251C779000A8BD22 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DABEF0DA251C779000A8BD22 /* ViewController.swift */; };
@@ -16,6 +17,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0AD2FC926FDE1928F8E05DEC /* Pods-kakaoLinkTutorial.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-kakaoLinkTutorial.release.xcconfig"; path = "Target Support Files/Pods-kakaoLinkTutorial/Pods-kakaoLinkTutorial.release.xcconfig"; sourceTree = "<group>"; };
+		7B73278405756B0962D543DA /* Pods-kakaoLinkTutorial.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-kakaoLinkTutorial.debug.xcconfig"; path = "Target Support Files/Pods-kakaoLinkTutorial/Pods-kakaoLinkTutorial.debug.xcconfig"; sourceTree = "<group>"; };
+		BE7CF88E834533BC1E9305F3 /* Pods_kakaoLinkTutorial.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_kakaoLinkTutorial.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DABEF0D3251C779000A8BD22 /* kakaoLinkTutorial.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = kakaoLinkTutorial.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DABEF0D6251C779000A8BD22 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DABEF0D8251C779000A8BD22 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -31,18 +35,39 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6353C3C94B5B5F59DD2823D7 /* Pods_kakaoLinkTutorial.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		379B538F359B90BF6BDE5457 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BE7CF88E834533BC1E9305F3 /* Pods_kakaoLinkTutorial.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		66D9E75441569DCC4B63B625 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7B73278405756B0962D543DA /* Pods-kakaoLinkTutorial.debug.xcconfig */,
+				0AD2FC926FDE1928F8E05DEC /* Pods-kakaoLinkTutorial.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		DABEF0CA251C779000A8BD22 = {
 			isa = PBXGroup;
 			children = (
 				DABEF0D5251C779000A8BD22 /* kakaoLinkTutorial */,
 				DABEF0D4251C779000A8BD22 /* Products */,
+				66D9E75441569DCC4B63B625 /* Pods */,
+				379B538F359B90BF6BDE5457 /* Frameworks */,
 			);
+			indentWidth = 5;
 			sourceTree = "<group>";
 		};
 		DABEF0D4251C779000A8BD22 /* Products */ = {
@@ -74,9 +99,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DABEF0E7251C779200A8BD22 /* Build configuration list for PBXNativeTarget "kakaoLinkTutorial" */;
 			buildPhases = (
+				4AF54332B66DCFACB33EDE3E /* [CP] Check Pods Manifest.lock */,
 				DABEF0CF251C779000A8BD22 /* Sources */,
 				DABEF0D0251C779000A8BD22 /* Frameworks */,
 				DABEF0D1251C779000A8BD22 /* Resources */,
+				7825BE5011F224141DE3CDC5 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -132,6 +159,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4AF54332B66DCFACB33EDE3E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-kakaoLinkTutorial-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7825BE5011F224141DE3CDC5 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-kakaoLinkTutorial/Pods-kakaoLinkTutorial-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-kakaoLinkTutorial/Pods-kakaoLinkTutorial-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-kakaoLinkTutorial/Pods-kakaoLinkTutorial-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		DABEF0CF251C779000A8BD22 /* Sources */ = {
@@ -282,6 +351,7 @@
 		};
 		DABEF0E8251C779200A8BD22 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7B73278405756B0962D543DA /* Pods-kakaoLinkTutorial.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -300,6 +370,7 @@
 		};
 		DABEF0E9251C779200A8BD22 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0AD2FC926FDE1928F8E05DEC /* Pods-kakaoLinkTutorial.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
